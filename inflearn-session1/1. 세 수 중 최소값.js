@@ -11,6 +11,7 @@ function solution1(a, b, c) {
   return min;
 }
 
+//=============================================== 강의 answer
 function solution(a, b, c) {
   let answer;
   if (a < b) answer = a;
