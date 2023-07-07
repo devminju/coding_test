@@ -31,4 +31,3 @@ const arr = [25, 23, 11, 47, 53, 17, 33];
 const arr1 = [25, 23, 11, 47, 53, 17, 33];
 console.log(solution(3, arr));
 console.log(solution1(3, arr));
-// console.log(answer(3, arr));
