@@ -18,6 +18,8 @@ function solution1(s, t) {
   for (let x of s) {
     if (x === t) answer++;
   }
+  // let answer = s.split(t).length;
+  // return answer - 1;
   return answer;
 }
 
