@@ -18,34 +18,6 @@
 // (추가) 3. pop() 호출시 stack이 비어있으면 false를 반환한다.
 
 function solution(s) {
-  const stack = [];
-  for (const c of s) {
-    if (c === "(") {
-      stack.push(c);
-    } else {
-      if (stack.length === 0) {
-        return false;
-      }
-      stack.pop();
-    }
-  }
-  return stack.length === 0;
-}
-
-console.log(solution("()()"));
-console.log(solution("(())()"));
-console.log(solution(")()("));
-console.log(solution("(()("));
-console.log(solution("("));
-console.log(solution(")"));
-console.log(solution("))))))"));
-
-// 후기
-// - for 문 보단 for of 구문을 사용하자.
-// stack 이 아닌 count를 사용해서 구현할 수 있다.
-
-// 내 코드 (24.12.11)
-function solution1(s) {
   let answer = true;
   const stack = [];
   for (const char of s) {
@@ -66,3 +38,33 @@ function solution1(s) {
   return true;
   // 위 두 줄을 한줄로 끝낼 수 있음 return stack.length === 0
 }
+
+console.log(solution("()()"));
+console.log(solution("(())()"));
+console.log(solution(")()("));
+console.log(solution("(()("));
+console.log(solution("("));
+console.log(solution(")"));
+console.log(solution("))))))"));
+
+// 답안 ====================================
+
+function answer(s) {
+  const stack = [];
+  for (const c of s) {
+    if (c === "(") {
+      stack.push(c);
+    } else {
+      if (stack.length === 0) {
+        return false;
+      }
+      stack.pop();
+    }
+  }
+  return stack.length === 0;
+}
+
+// 후기 =====================================
+// for 문 보단 for of 구문을 사용하자.
+// stack 이 아닌 count를 사용해서 구현할 수 있다.
+// 풀이를 작성하기 전 가설을 세우자.
